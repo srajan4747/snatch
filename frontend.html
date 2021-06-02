@@ -1,0 +1,1654 @@
+<html>
+        <title>Snatch - Home</title>
+        <head>
+                <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+                <style>
+
+
+.fa{
+        cursor: pointer;
+}
+
+.power-icon{
+        cursor: pointer;
+}
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+.profile_img{
+        height: 100px;
+        width: 100px;
+        border:5px white solid;
+        box-shadow: 3px 5px 8px rgb(203, 203, 228);
+        border-radius: 50%;
+        position: relative;
+        top:-70px;
+}
+
+.up_card{
+        width: 60%;
+        margin-top:50px;
+        height: 150px;
+        border-radius: 0px 20px 20px 0px;
+        box-shadow: 0px 0px 8px rgb(203, 203, 228);
+}
+
+.up_image{
+        float: left;
+        height: 100%;
+        width: 30%;
+        margin: 0px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-right: 20px;
+}
+
+.up_details{
+        float: left;
+        height: 100%;
+        width: auto;
+        text-align: left;
+}
+
+.fa-pen{
+        float: right;
+        font-size: 20px;
+        color:gray;
+        cursor:pointer;
+        margin: 25px;
+        margin-right: 0px;
+        transition-duration: 0.5s;
+}
+
+.fa-pen:hover{
+      color:black;
+      transform: rotate(360deg);
+      transition-duration: 0.3s;
+}
+
+.fa-trash-alt{
+        float: right;
+        font-size: 20px;
+        color:gray;
+        cursor:pointer;
+        margin: 25px;
+        
+        transition-duration: 0.5s;
+}
+
+.fa-trash-alt:hover{
+      color:black;
+      font-size:22;
+      transition-duration: 0.3s;
+}
+
+.up_name{
+        font-size: 18px;
+        color: gray;
+        margin: 10px;
+        margin-top: 30px;
+        margin-left: 0px;
+}
+
+.up_price{
+        font-size: 16px;
+        color: black;
+        margin: 10px;
+        margin-left: 0px;
+}
+
+.up_category{
+        font-size: 14px;
+        color: black;
+        margin: 10px;
+        margin-left: 0px;
+}
+
+
+
+
+
+
+.profile_bar{
+        height: 200px;
+        width: 80%;
+        border: 20px;
+        box-shadow: 0px 0px 8px rgb(203, 203, 228);
+        background-color: white;
+        border-radius: 20px 20px 0px 0px;
+        position: relative;
+        top:30px;
+        padding: 20px;
+        margin-bottom: 100px;
+        border-bottom:  5px solid gray;
+}
+
+.profile_name{
+        font-size: 36px;
+        color: gray;
+        text-align: center;
+        margin:30px;
+        position: relative;
+        top:-60px;
+}
+
+.profile_city{
+        font-size: 20px;
+        color: black;
+        text-align: center;
+        position: relative;
+        top:-80px;
+}
+
+.profile_age{
+        font-size: 16px;
+        color: black;
+        text-align: center;
+        margin: 10px;
+        position: relative;
+        top:-80px;
+}
+
+.trash_icon{
+        float: right;
+        margin: 30px;
+        font-size: 20px;
+        color:gray;
+        transition-duration: 0.5s;
+        cursor: pointer;
+}
+
+.trash_icon:hover{
+        float: right;
+        margin: 30px;
+        font-size: 22px;
+        color:rgb(243, 114, 114);
+        transition-duration: 0.3s;
+}
+
+.cart_card{
+        width: 80%;
+        box-shadow: 3px 5px 8px rgb(203, 203, 228);
+  border-radius: 15px;
+  margin: 25px;
+  height: 120px;
+  
+}
+
+.back{
+        color:gray !important;
+        transition-duration: 0.5s !important ;
+}
+
+.back:hover{
+        color:black !important;
+        transition-duration: 0.3s !important;
+        transform: rotate(360deg);
+}
+
+.cart_details{
+        padding: 30px;
+        width:auto;
+        height: 100%;
+        padding: 20px;
+
+}
+
+.cart_name{
+        text-align: left;
+        font-size: 24px;
+        margin: 10px;
+        color: gray;
+}
+
+.cart_price{
+        text-align: left;
+        margin-left: 10px;
+        font-size: 20px;
+}
+
+
+.card{
+  margin:30px;
+  height:350px;
+  width:200px;
+  box-shadow: 0px 0px 13px rgb(203, 203, 228);
+  border-radius: 15px;
+  display: inline-block;
+  background-color: white;
+}
+
+.search{
+        font-size: 20px;
+        padding: 10px;
+        border-radius: 20px;
+        width: 30vw;
+        position: fixed;
+        text-align: left;
+        top:33px;
+        left:75px;
+        z-index: 200;
+}
+
+.card-img{
+  margin: 0px;
+  width: 100%;
+  height: 265px;
+  background-image: url('./uploads/images/snatch_card.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor:pointer;
+  
+}
+
+.card-title{
+  text-align: center;
+  font-size: 14px;
+  margin: 10px;
+  margin-top:20px;
+  color: gray;
+}
+
+.card-price{
+  text-align: center;
+  font-size: 12px;
+  margin: 10px;
+  color:black
+}
+
+
+                        *{font-family: 'Sen';}
+                        .side-bar{
+                                display: flex;
+                                flex-direction: column;
+                                background-color: rgb(240,240,240);
+                                border-radius: 0px 15px 15px 0px;
+                                width: 75px;
+                                padding: 20px;
+                                height: 65vh;
+                                position: fixed;
+                                left: 0px;
+                                top:15vh;
+                                
+                        }
+                        .side-bar-icon{
+                                display: block;
+                                height: 15%;
+                                margin-top: 25%;
+                                text-align: center;
+                                cursor:pointer;
+                        }
+                        .fa{
+                                font-size: 24px;
+                                color:gray;
+                                margin: 10px;
+                        }
+
+                        .bubble{
+                                height: 10px;
+                                width: 10px;
+                                border-radius: 50%;
+                                background-color: rgb(240,240,240);
+                                border: 30px solid rgb(240,240,240);
+                                padding: 0px;
+                                cursor: pointer;
+                                transition-duration: 0.5s;
+                        }
+                        .filter{
+                                position: fixed;
+                                right: 30px;
+                                bottom: 130px;
+                        }
+                        .profile{
+                                position: fixed;
+                                right: 30px;
+                                bottom: 30px;
+                        }
+                        #prof{
+                                position: relative;
+                                margin: 0px;
+                                top:-7px;
+                                left:-5px;
+                        }
+                        #filt{
+                                position: relative;
+                                margin: 0px;
+                                top:-5px;
+                                left:-7px;
+                        }
+
+                        .logo-div{
+                                height: 200px;
+                                width: 200px;
+                                background-color: gray;
+                                color: white;
+                                position: fixed;
+                                right:30px;
+                                top:0px;
+                                box-shadow: 3px 5px 8px rgb(203, 203, 228);
+                        }
+                        .logo-text{
+                                font-family: 'Abiland';
+                                font-size: 48px;
+                                margin-top: 30px;
+                                width: 100%;
+
+                                color: white;
+                                text-align: center;
+                        }
+
+                        #sell{
+                                color: white;
+                                margin:20px;
+                                margin-top: 45px;
+                        }
+
+                        #cart{
+                                color:white;
+                                margin:20px;
+                                margin-top: 45px;
+                        }
+
+                        #power{
+                                color:white;
+                                margin:20px;
+                                font-size: 24px;
+                                margin-top: 45px;
+                        }
+
+
+                  
+
+                        .holder{
+                                display: flex;
+                                width: 100%;
+                                align-items: center;
+                                flex-direction: row;
+                                color: white !important;
+                        }
+
+                        .big_block{
+                                height: 300px;
+                                width: 100%;
+                                background-color: transparent;
+                        }
+
+                        .load_more{
+                                margin-top:100px;
+                                margin-left: 250px;
+                                margin-right: 250px;
+                                background-color: black;
+                                color: white;
+                                font-size: 16px;
+                                padding: 10px;
+                                border-radius: 20px;
+                                cursor: pointer;
+                        }
+                        
+                        .section{
+                                position: fixed;
+                                overflow-y: auto;
+                                width: 64vw;
+                                height: 100vh;
+                                left:15vw;
+                                padding: 3%;
+                                padding-bottom: 400px;
+                        }
+
+
+                        .body{
+                                overflow: hidden;
+                                
+                        }
+
+ 
+
+        .left-view{
+                width:45%;
+                height:90%;
+                margin:30px;
+                float: left;
+                background-color: transparent;
+        }
+
+        .right-view{
+                width: 40%;
+                height: 90%;
+                margin:30px;
+                background-color: transparent;
+                float: right;
+        }
+
+        .product-image-view{
+                width: 80%;
+                height: 67%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                margin-bottom:20px;
+        }
+
+        .button{
+                background-color: black;
+                                color: white;
+                                font-size: 16px;
+                                padding: 10px;
+                                border-radius: 20px;
+                                cursor: pointer;
+                                margin-left:20px;
+                                margin-right: 20px;
+                                margin-top: 20px;
+                                margin-bottom: 0px;
+        }
+
+        .product-title-view{
+                margin-top:20px;
+                font-size: 22px;
+                color: gray;
+        }
+        .product-discount-view{
+                margin-top: 5px;
+                font-size: 18px;
+                color: green;
+        }
+        .product-description-view{
+                margin-top: 25px;
+                font-size: 16px;
+                color: rgb(0, 0, 0);
+                height: auto;
+                width: 90%;
+                text-align: justify;
+        }
+
+        .filter-bar{
+                height: 80px;
+                width: 80%;
+                position: fixed;
+                bottom: 0px;
+                left:10%;
+                background-color: rgb(240,240,240);
+                box-shadow: 3px 5px 8px rgb(203, 203, 228);
+                border-radius: 15px 15px 0px 0px;
+                z-index: 100;
+                display: flex;
+        }
+
+        input:focus, textarea:focus, select:focus{
+        outline: none;
+    }
+        input{
+                width: 80%;
+                font-size:16px;
+                padding: 10px;
+                background-color: rgb(240,240,240);
+                color: gray;
+                text-align: center;
+                border: 0.1px soild rgb(240,240,240);
+                border-radius: 20px;
+                margin-top:10px;
+                border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  margin-bottom: 20px;
+        }
+
+        .prompt{
+                height: auto;
+                width: 100%;
+                padding: 10px;
+                color: white;
+                font-size: 14px;
+                position: fixed;
+                top:0px;
+                right:-20px;
+                text-align: center;
+                opacity: 0;
+                transition-duration: 1s;
+                z-index:10000;
+        }
+
+        
+
+                </style>
+        </head>
+        <body>
+                
+                <form class="example">
+                        <div style="width: 10vw;"><input type="text" placeholder="Search Snatch" style="width: 17vw !important;text-align: left !important;padding-left:30px;" class="search" id="search_bar" ><i class="fa fa-search" style="position:fixed;font-size: 16px;color:gray;margin-top: 48px;margin-left: 18vw;z-index:400;cursor: pointer;" onclick="searchTerm()"></i></div>
+                      </form>
+                <div class="filter-bar" id="fb" style="display: none;">
+
+                        <div class="button" id="ss" onclick="switchSort()" style="text-align:center;margin: 20px;width: 25%;background-color: white;color:gray;display: inline;padding: 10px;height: auto;">Sorting Scheme</div>
+                        <input type="text" id="lp" placeholder="Lowest Price (INR)" style="margin: 20px;width: 25%;background-color: white;display: inline;padding: 10px;height: auto;">
+                        <input type="text" id="hp" placeholder="Highest Price (INR)" style="margin: 20px;width: 25%;background-color: white;display: inline;padding: 10px;height: auto;">
+                        <div class="button" id="af" style="margin: 20px;width: 10%;display: inline;padding: 10px;height: auto;text-align: center;" onclick="applyFilters()">APPLY</div>
+
+                       
+                </div>
+                <div class="prompt" id="prompt"></div>
+<div class="side-bar">
+<div class="side-bar-icon"  onclick="switchCategory('fashion')">
+        <i class="fa fa-tshirt"></i>
+<div class="side-bar-icon-text">Fashion</div>        
+</div>
+<div class="side-bar-icon" onclick="switchCategory('gadget')">
+        <i class="fa fa-headphones"></i>
+<div class="side-bar-icon-text">Gadgets</div>        
+</div>
+<div class="side-bar-icon" onclick="switchCategory('home')">
+        <i class="fa fa-spa"></i>
+<div class="side-bar-icon-text">Decor</div>        
+</div>
+<div class="side-bar-icon" onclick="switchCategory('grocery')">
+        <i class="fa fa-pizza-slice"></i>
+        <div class="side-bar-icon-text">Grocery</div>        
+        </div>
+        <div class="side-bar-icon" onclick="switchCategory('books')">
+                <i class="fa fa-book-open"></i>
+        <div class="side-bar-icon-text">Books</div>        
+        </div>
+
+</div>
+
+<div class="profile bubble" onclick="showProfile()">
+        <i class="fa fa-user" id="prof"></i>
+        
+</div>
+<div class="filter bubble" id="filtb"  onclick="toggleFilter()">
+        <i class="fa fa-filter" id="filt"></i>
+       
+</div>
+
+<div class="logo-div">
+        <div class="logo-text">
+snatch
+        </div>
+        <div class="holder" style="display: flex;">
+        <div class="sell-icon"onclick="showAdd()"><i class="fa fa-plus" id="sell"></i></div>
+        <div class="cart-icon"><i class="fa fa-shopping-cart" id="cart"  onclick="showCart()"></i></div>
+        <div class="power-icon" onclick="logout(1)"><i class="fas fa-power-off" id="power"></i></div>
+        </div>
+</div>
+</div>
+<center class="section">
+      
+<div id="products-section"  style="width:100%; height: auto;">
+        <i class="fas fa-arrow-left back" style="cursor:pointer;color: black;z-index: 100;position: fixed;top:50px;left:30px;font-size:24px;" onclick="goBack()" ></i>
+</div>
+<div id="view-section"  style="width:100%; height: auto;display: none;margin-top: 5%;">
+</div>
+<div id="profile-section"  style="width:100%; height: auto;display: none;">
+      
+</div>
+<div id="register-section"   style="width:100%; height: auto;display: none;">
+        <i class="fas fa-arrow-left back" style="cursor:pointer;color: black;z-index: 100;position: fixed;top:50px;left:30px;font-size:24px;" onclick="goBack()" ></i>
+       
+        <div class="profile_bar" style="height: auto !important;padding: 30px;box-shadow: 0px 0px 0px white !important;border:0 !important">
+                <img src="uploads/images/snatch_black.png" height="100px" width="auto">
+                <br><br>
+                <div class="profile_name" style="position: relative;top:0px;">Single Account. Multiple Benifits!</div>
+                <input id="name_register" type="text" placeholder="Your Full Name">
+                <input id="email_register" type="email" placeholder="Your E-Mail ID">
+                <input id="city_register" type="text" placeholder="Your present City">
+                <input id="pass_register" type="text" placeholder="Choose a Password">
+                <input id="repass_register" type="password" placeholder="Confirm your Password">
+                <div class="button" style="width: 50%;" onclick="registerUser()">Create Account</div>
+                               <div class="button" style="background-color:white;color:gray;width: 50%;font-size:16px" onclick="showLogin()">Already on Snatch? Login Here.</div>
+ 
+        </div>
+</div>
+
+<div id="add-section"   style="width:100%; height: auto;display: none;">
+        <i class="fas fa-arrow-left back" style="cursor:pointer;color: black;z-index: 100;position: fixed;top:50px;left:30px;font-size:24px;" onclick="goBack()" ></i>
+       
+        <div class="profile_bar" style="height: auto !important;padding: 30px;box-shadow: 0px 0px 0px white !important;border:0 !important">
+                <div class="profile_name" style="position: relative;top:0px;">Sell with Snatch. Grow Faster!</div>
+                <input type="button" style="height: 100px;width: 100px;border-radius: 50%;display: block;background-image: url('./upload2.png');background-size: contain;background-position: center;cursor:pointer" onclick="clickUpload()" >
+               
+                <input id="up_name" type="text" maxlength=20 placeholder="Product Name">
+                <div class="button" id="classChooser" style="background-color: rgb(240,240,240);color:gray;margin-top:10px;margin-bottom: 20px;width:78%" onclick="switchClass()">Select Category</div>
+                <input id="up_price" type="number" placeholder="Price to Buy | INR">
+                <input id="up_mrp" type="number" placeholder="Marked Price | INR">
+                
+                <textarea id="up_des" type="text" placeholder="Product Description" style="font-size:16px;width: 80%;height: 40px;margin-bottom:10px;padding:10px;border-radius: 20px;background-color: rgb(240,240,240);text-align: center;border: 0px solid white;"></textarea>
+                
+                <form  style="display: none;" id="iu-form">
+                        <input type="file" accept="image/*" name="photo" id="iu" onchange="uploadPhoto()">
+                        <input type="submit" value="upload" id="iu-button">
+                </form>
+                <div class="button" style="width: 50%;" onclick="uploadProduct()">Add Product to Snatch</div>
+                
+        </div>
+</div>
+
+<div id="edit-section"   style="width:100%; height: auto;display: none;">
+        <i class="fas fa-arrow-left back" style="cursor:pointer;color: black;z-index: 100;position: fixed;top:50px;left:30px;font-size:24px;" onclick="goBack()" ></i>
+       
+        <div class="profile_bar" style="height: auto !important;padding: 30px;box-shadow: 0px 0px 0px white !important;border:0 !important">
+                <div class="profile_name" style="position: relative;top:0px;">Snatch Product Editor</div>
+                <input type="button" style="height: 100px;width: 100px;border-radius: 50%;display: block;background-image: url('./upload2.png');background-size: contain;background-position: center;cursor:pointer" onclick="clickUpload()" >
+                <input id="up2_name" type="text" maxlength=20 placeholder="Product Name">
+                <input id="up2_price" type="number" placeholder="Price to Buy | INR">
+                <input id="up2_mrp" type="number" placeholder="Marked Price | INR">
+                <textarea id="up2_des" type="text" placeholder="Product Description" style="font-size:16px;width: 80%;height: 40px;margin-bottom:10px;padding:10px;border-radius: 20px;background-color: rgb(240,240,240);text-align: center;border: 0px solid white;"></textarea>
+                
+                <form  style="display: none;" id="iu-form">
+                        <input type="file" accept="image/*" name="photo" id="iu" onchange="uploadPhoto()">
+                        <input type="submit" value="upload" id="iu-button">
+                </form>
+                <div class="button" id="pc" style="width: 50%;" >Update Product on Snatch</div>
+                
+        </div>
+</div>
+
+<div id="login-section"   style="width:100%; height: auto;display: none;">
+        <i class="fas fa-arrow-left back" style="cursor:pointer;color: black;z-index: 100;position: fixed;top:50px;left:30px;font-size:24px;" onclick="goBack()" ></i>
+        <div class="profile_bar" style="height: auto !important;padding: 30px;box-shadow: 0px 0px 0px white !important;border:0 !important">
+                <img src="uploads/images/snatch_black.png" height="100px" width="auto">
+                <br><br>
+                <div class="profile_name" style="position: relative;top:0px;">Happiness? Just a step away!</div>
+                <input id="email_login" type="email" placeholder="Your Registered ID">
+                <input id="pass_login" type="text" placeholder="Your Account Password">
+                <div class="button" style="width: 50%;" onclick="loginUser()">Login</div>
+                <div class="button" style="background-color:white;color:gray;width: 50%;font-size:16px" onclick="showRegister()">Don't have an Account? Register Here.</div>
+        </div>
+</div>
+<div id="cart-section"  style="width:100%; height: auto;display: none;">
+</div>
+
+</center>
+</body>
+
+<script>
+var classCounter=-1;
+var chosenClass = '';
+function toTitleCase(str) {
+        str = str.toString();
+  return str.replace(
+    /\w\S*/g,
+    function(txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    }
+  );
+}
+
+        function registerUser(){
+                var name = document.getElementById('name_register').value;
+                var pass = document.getElementById('pass_register').value;
+                var city = document.getElementById('city_register').value;
+                var email = document.getElementById('email_register').value;
+
+                fetch('http://127.0.0.1:5000/register',  {
+        method: 'POST',
+        body: JSON.stringify({"email": email, "password":pass, "city":city, "name":name }),
+        headers: {'Content-Type': 'application/json' },
+    })
+    .then(response => response.json())
+    .then(function(data) {
+        console.log(data);
+        if(data.code==200) 
+        {
+                document.getElementById('name_register').value='';
+                document.getElementById('pass_register').value='';
+                document.getElementById('city_register').value='';
+                document.getElementById('email_register').value='';
+                showLogin();
+                snatchAlert("Account created Successfully! Please Login to continue.",1);
+        }
+        if(data.code==-4)
+        {
+                snatchAlert("Snatch Servers currently unreachable! Please try again later.",0)
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error)
+    });
+}
+
+
+var categoryArray = ['Home Decor & Furniture', 'Clothes & Fashion', 'Electronics & Gadgets', 'Books & Stationary', 'Grocery & Confectionary'];
+
+var categoryDB = ['home','fashion','gadget','books','grocery'];
+
+
+function switchClass(){
+classCounter++;
+classCounter%=5;
+document.getElementById('classChooser').innerHTML = "Category: " + categoryArray[classCounter];
+chosenClass = categoryDB[classCounter];
+console.log(chosenClass);
+}
+
+function loginUser(){
+                var pass = document.getElementById('pass_login').value;
+                var email = document.getElementById('email_login').value;
+                
+                fetch('http://127.0.0.1:5000/login',  {
+        method: 'POST',
+        body: JSON.stringify({"email": email, "password":pass }),
+        headers: {'Content-Type': 'application/json' },
+    })
+    .then(response => response.json())
+    .then(function(data) {
+        console.log(data);
+        if(data.code==200)
+        {
+                window.localStorage.setItem('token', data.token);
+                window.localStorage.setItem('email', email);
+                window.localStorage.setItem('cart',data.cart)
+                console.log(window.localStorage);
+                document.getElementById('pass_login').value = '';
+                document.getElementById('email_login').value='';
+                snatchAlert("Welcome to Snatch! Your Password has been verified.", 1);
+                showProducts();
+                document.getElementById('sell').style.display="";
+                document.getElementById('power').style.display="";
+        }
+        if(data.code==-1)
+        {
+                snatchAlert("Wrong Password! Please try again.",-1)
+        }
+        if(data.code==-4)
+        {
+                snatchAlert("Snatch Servers currently unreachable! Please try again later.",0)
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error)
+    });
+}
+
+        var his_array = [];
+        var offset=0;
+        var category='all';
+        var product_array = [];
+        var low = 0;
+        var high = 9999999999999;
+        var filter = 0; //FILTERS: [ 0: relevance | 1: price_asc | 2: price_dsc | 3: date_asc | 4: date_dsc ]
+        var uploaded_file_name='snatch_default.png';
+
+        function uploadProduct () {
+                var name = document.getElementById('up_name').value;
+                var mrp =(document.getElementById('up_mrp').value);
+                var price = (document.getElementById('up_price').value);
+                var des = document.getElementById('up_des').value;
+                var co1 = typeof(name)=="string"?1:0;
+                var co4 = mrp-price>=0?1:0;
+                console.log(chosenClass);
+                console.log(classCounter);
+                var co5 =  true; //(des.length>200&&des.length<500)?1:0;
+                if(name.length==0 || mrp.length==0 || price.length==0 || des.length==0)
+                {
+                snatchAlert("All fields are Required!",0);
+                }
+                else if((!(co1&&co4&&co5))||uploaded_file_name==='snatch_default.png')
+                {
+                        var warn = '';
+                        if(!co1) warn+=" Please provide a valid name. \n";
+                        if(!co4) warn+=" Items cannot be sold at prices greater than MRP. \n";
+                        if(!co5) warn+=" Please provide a suitably long Description (200-500 Characters) \n";
+                        if(uploaded_file_name==='snatch_default.png') warn+=" Product Image is mandatory to create listing.\n"
+                        snatchAlert(warn,-1);
+                }
+                 else
+                 {
+                        var auth = window.localStorage.getItem('token').toString();
+                        var myHeaders = new Headers();
+                        myHeaders.append('Authorization', auth);
+                        myHeaders.append('Content-Type', 'application/json');
+                        buildIndex(name, des);
+
+
+                        fetch('http://127.0.0.1:5000/addProduct',  {
+        method: 'POST',
+        body: JSON.stringify({"name": name, "mrp":mrp, "price":price, "des":des, "image": uploaded_file_name, "index": index, "category": chosenClass }),
+        headers: myHeaders,
+    })
+    .then(response => response.json())
+    .then(function(data) {
+        console.log(data);
+        if(data.code==200) 
+        {
+                document.getElementById('up_name').value='';
+                document.getElementById('up_price').value='';
+                document.getElementById('up_mrp').value='';
+                document.getElementById('up_des').value='';
+                document.getElementById('classChooser').innerHTML='Select Category';
+                uploaded_file_name='snatch_default.png';
+                index = [];
+                showProfile();
+                snatchAlert("Product was successfully added to Snatch Product Listing.",1)
+        }
+        if(data.code==-4)
+        {
+                snatchAlert("Snatch Servers currently unreachable! Please try again later.",0)
+        }
+        if(data.code==55)
+        {
+                logout(2);
+        }
+    })
+    .catch(error => {
+            snatchAlert("Snatch Servers Unreachable. Please try again later.",-1)
+        console.error('Error:', error)
+    });
+                 }
+
+        }
+
+        var index = [];
+
+        function onlyUnique(value, index, self) {
+  return self.indexOf(value) === index;
+}
+
+        function buildIndex(product_name,product_description) {
+index = [];
+  var str = product_name.toLowerCase() + " " + product_description.toLowerCase();
+  str = str.replace("!"," ");
+  str = str.replace("?", " ");
+  str = str.replace(/\./g,' ');
+  str = str.replace("'", " ");
+  str = str.replace("[", " ");
+  str = str.replace("]", " ");
+  str = str.replace("(", " ");
+  str = str.replace(")", " ");
+  str = str.replace("/", " ");
+  str = str.replace(",", " ");
+  str = str.replace(":", " ");
+  str = str.replace(";", " ");
+  var res = str.split(" ");
+  var split=[];
+  for(var i=0; i<res.length;i++)
+  if(res[i].length>=1 && (res[i].toLowerCase()!='this' && res[i].toLowerCase()!='that' && res[i].toLowerCase()!='the' && res[i].toLowerCase()!='then' && res[i].toLowerCase()!='though' && res[i].toLowerCase()!='thus' && res[i].toLowerCase()!='thats' && res[i].toLowerCase()!='why' && res[i].toLowerCase()!='where' && res[i].toLowerCase()!='how' && res[i].toLowerCase()!='therefore' && res[i].toLowerCase()!='hence' && res[i].toLowerCase()!='since' && res[i].toLowerCase()!='not' && res[i].toLowerCase()!='is' && res[i].toLowerCase()!='are' && res[i].toLowerCase()!='to')) 
+  {
+        var word = res[i].toLowerCase();
+  split.push(word);
+  split.push(word.replace('-',' '));
+  if(word[word.length-1]==='s') split.push(word.substring(0, word.length-1));
+  }
+  index = split.filter(onlyUnique);
+  console.log(index);
+}
+
+
+        function editProduct (id2edit) {
+                var name = document.getElementById('up2_name').value;
+                var mrp =(document.getElementById('up2_mrp').value);
+                var price = (document.getElementById('up2_price').value);
+                var des = document.getElementById('up2_des').value;
+                var co1 = typeof(name)=="string"?1:0;
+                var co4 = mrp-price>=0?1:0;
+                var co5 =  true; //(des.length>200&&des.length<500)?1:0;
+                if(name.length==0 || mrp.length==0 || price.length==0 || des.length==0)
+                {
+                snatchAlert("All fields are Required!",0);
+                }
+                else if((!(co1&&co4&&co5))||uploaded_file_name==='snatch_default.png')
+                {
+                        var warn = '';
+                        if(!co1) warn+=" Please provide a valid name. \n";
+                        if(!co4) warn+=" Items cannot be sold at prices greater than MRP. \n";
+                        if(!co5) warn+=" Please provide a suitably long Description (200-500 Characters) \n";
+                        if(uploaded_file_name==='snatch_default.png') warn+=" Product Image is mandatory to create listing.\n"
+                        snatchAlert(warn,-1);
+                }
+                 else
+                 {
+                        var auth = window.localStorage.getItem('token').toString();
+                        var myHeaders = new Headers();
+                        myHeaders.append('Authorization', auth);
+                        myHeaders.append('Content-Type', 'application/json');
+
+
+                        fetch('http://127.0.0.1:5000/editProduct',  {
+        method: 'POST',
+        body: JSON.stringify({"name": name, "mrp":mrp, "price":price, "des":des, "image": uploaded_file_name, "id": id2edit }),
+        
+        headers: myHeaders,
+    })
+    .then(response => response.json())
+    .then(function(data) {
+        console.log(data);
+        if(data.code==200) 
+        {
+                document.getElementById('up2_name').value='';
+                document.getElementById('up2_price').value='';
+                document.getElementById('up2_mrp').value='';
+                document.getElementById('up2_des').value='';
+                uploaded_file_name='snatch_default.png';
+                showProfile();
+                snatchAlert("Product Specifications have been successfully Updated!.",1)
+        }
+        if(data.code==-4)
+        {
+                snatchAlert("Snatch Servers currently unreachable! Please try again later.",0)
+        }
+    })
+    .catch(error => {
+            snatchAlert("Snatch Servers Unreachable! Please try again later.",-1)
+        console.error('Error:', error)
+    });
+                 }
+
+        }
+
+        function uploadPhoto () {
+  // This assumes the form's name is `myForm`
+  var form = document.getElementById("iu-form");
+  var auth = window.localStorage.getItem('token').toString();
+  var photo = new FormData(form);
+  var myHeaders = new Headers();
+  myHeaders.append('Authorization', auth);
+  fetch('http://localhost:5000/upload', {
+    method: 'POST',
+    body: photo,
+    headers: myHeaders,
+  }).then(response=>response.json())
+  .then(function(data){
+          if(data.status===200)
+          {
+          snatchAlert("Picture uploaded to Snatch Servers",1)
+          console.log(data.file.toString());
+          uploaded_file_name=data.file.toString();
+          }
+          if(data.status==-4)
+          {
+                  snatchAlert("Snatch servers unreachable! Please try again later.", -1);
+          }
+  })
+  .catch(error => console.log(error));
+}
+
+var userProducts;
+
+        function showProfile(){
+                if(window.localStorage.getItem('token'))
+                {
+                console.log("SHOW PROFILE CALLED")
+                var auth = window.localStorage.getItem('token').toString();
+                var myHeaders = new Headers();
+                myHeaders.append('Content-Type', 'application/json');
+                myHeaders.append('Authorization', auth);
+            fetch("http://127.0.0.1:5000/profile",  {
+        method: 'GET',
+        headers: myHeaders,
+    })
+    .then(response => response.json())
+        .then(function(data){ 
+                if(data.code==200)
+                {
+            pdata = data.product;   
+            userProducts = pdata;   
+            data = data.profile[0];
+            var time = data.created_at.toString().substring(0,4);
+           var profile = '<i class="fas fa-arrow-left back" style="cursor:pointer;color: black;z-index: 100;position: fixed;top:50px;left:30px;font-size:24px;" onclick="goBack()" ></i>';
+        profile+= '<div class="profile_bar"><div class="profile_img" style="background-size:cover;background-position:center;background-repeat:no-repeat;background-color:gray;background-image:url(\'snatch_avatar.png\')"></div><div class="profile_name">'+ toTitleCase(data.name)+'</div><div class="profile_city">'+ data.city +'</div><div class="profile_age">Member since '+ time +'</div></div>';
+        data = pdata;
+        console.log(data);
+        for(var i=0; i<data.length;i++)
+        {
+                profile+='<div id="'+ data[i].product_id +'" class="up_card"><div class="up_image" style="background-image:url(\'uploads/images/' + data[i].product_image + '\')"></div><div class="up_edit" ><i class="fas fa-trash-alt" onclick="deleteProduct('+data[i].product_id+')"></i>&emsp;<i onclick="showEdit('+ i +')" class="fas fa-pen"></i></div><div class="up_details"><div class="up_name">'+ toTitleCase(data[i].product_name) +'</div><div class="up_price">Snatch Price: &#8377;'+ data[i].product_price +'</div><div class="up_category">Category: '+ toTitleCase(data[i].category)+'</div></div></div>'
+        }
+        profile+="<div style='height:400px;width:100%;background-color:transparent'></div>"
+        document.getElementById('profile-section').innerHTML = profile;
+        }
+        else   if(data.code==55)
+        {
+                logout(2);
+        }
+})
+    .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('products-section').innerHTML+= '<img width="30%" height="auto" src="uploads/images/cart_banner.png"><br><Br><p style="font-size:20px;color:gray">Looks like we lost the connection!</p><br><br><div class="big_block" onclick="javascript: window.location.reload()" ><div class="load_more" style="width:50%;cursor:pointer" >RETRY CONNECTION</div></div>';
+        });
+
+        document.getElementById('products-section').style.display='none';
+        document.getElementById('view-section').style.display='none';
+        document.getElementById('profile-section').style.display='';
+        document.getElementById('cart-section').style.display='none';
+        document.getElementById('register-section').style.display='none';
+            document.getElementById('login-section').style.display='none';
+        document.getElementById('add-section').style.display='none';
+        document.getElementById('edit-section').style.display='none';
+}
+else showLogin();
+        }
+
+        function longest_common_starting_substring(arr1){
+  const arr= arr1.concat().sort();
+  const a1= arr[0];
+  const a2= arr[arr.length-1];
+  const L= a1.length;
+  let i= 0;
+  while(i< L && a1.charAt(i)=== a2.charAt(i)) i++;
+  console.log(arr1 + " = " + a1.substring(0, i));
+  return a1.substring(0, i).length;
+}
+
+  
+var minIndex=[];
+        function getIndex(){
+
+                if(window.localStorage.getItem('collectedIndex')==null)
+                fetch("http://127.0.0.1:5000/index",  {
+        method: 'GET',
+    })
+    .then(response => response.json())
+        .then(function(data){ 
+            console.log(data);
+            for(var i=0; i<data.length;i++)
+            {
+                    minIndex.push(data[i].product_name);
+            }
+            
+            collectedIndex = new Object;
+            minIndex = minIndex.filter(onlyUnique);
+            for(var j=0; j<minIndex.length;j++)
+            {
+                    var itemTags = [];
+            for(var i=0; i<data.length;i++)
+            {
+                    if(data[i].product_name == minIndex[j])
+                    {
+                            itemTags.push(data[i].tag_name);
+                    }
+            }
+            collectedIndex[minIndex[j]] = itemTags;
+        }
+        console.log(collectedIndex);
+        console.log("This is min Index: ",minIndex);
+        window.localStorage.setItem("minIndex",JSON.stringify(minIndex));
+        window.localStorage.setItem("collectedIndex",JSON.stringify(collectedIndex));
+            })
+    .catch(error => {
+        console.error('Error:', error);
+        });
+    }
+
+    function searchTerm(){
+
+        collectedIndex = JSON.parse(window.localStorage.getItem('collectedIndex'));
+        minIndex = JSON.parse(window.localStorage.getItem('minIndex'));
+        console.log("This is min Index: ",minIndex);
+                var term = document.getElementById('search_bar').value;
+                var term_array = term.split(' ');
+                console.log(term_array);
+                var powerObject = new Object;
+                console.log(minIndex);
+                for(var i=0; i<minIndex.length;i++)
+                {
+                        var w_match = 0, c_match = 0;
+                        for(var j=0; j<term_array.length; j++)
+                        {
+                                var search_term = term_array[j].toLowerCase();
+                                var tags_array = collectedIndex[minIndex[i]];
+                                
+                                for(var k=0; k<tags_array.length;k++)
+                                {
+                                        console.log("Colliding " + search_term + " against " + tags_array[k].toLowerCase());
+                                        if(search_term===tags_array[k].toLowerCase()) 
+                                {
+                                        console.log("Word Matched: ", search_term);
+                                        w_match++;
+                                        c_match+=(search_term.length);
+                                }
+                                else c_match+= longest_common_starting_substring([search_term.toLowerCase(), tags_array[k].toLowerCase()]);
+                                }
+                        }
+                                if(Math.pow(c_match,w_match) + c_match/100 > 1.1)
+                                {
+                                powerObject[minIndex[i]] = 
+                                console.log(Math.pow(c_match,w_match) + c_match/100);
+                                }
+                }
+                         console.log(powerObject);
+                         var searchResults = Object.entries(powerObject).sort((a,b)=>b[1]-a[1]).map(el=>el[0]);
+                         var sr = [];
+                         for(var i=0; i<searchResults.length;i++)
+                         {
+                                 sr.push(searchResults[i]);
+                         }
+                         callData(sr);
+                                }
+
+
+        function callData(searchResults)
+        {
+                console.log(searchResults);
+                var myHeaders = new Headers();
+                        myHeaders.append('Content-Type', 'application/json');
+                        fetch('http://127.0.0.1:5000/callData',  {
+        method: 'POST',
+        body: JSON.stringify({"products": searchResults }),
+        headers: myHeaders,
+                        })
+    .then(response => response.json())
+    .then(function(data){
+
+        console.log(data);
+
+        document.getElementById('products-section').style.display='';
+        document.getElementById('products-section').innerHTML='  <i class="fas fa-arrow-left back" style="cursor:pointer;color: black;z-index: 100;position: fixed;top:50px;left:30px;font-size:24px;" onclick="javascript: window.location.reload()" ></i>';
+        document.getElementById('view-section').style.display='none';
+        document.getElementById('profile-section').style.display='none';
+        document.getElementById('cart-section').style.display='none';
+        document.getElementById('register-section').style.display='none';
+        document.getElementById('login-section').style.display='none';
+        document.getElementById('add-section').style.display='none';
+        document.getElementById('edit-section').style.display='none';
+        product_array=[];
+        if(data.length>0)
+            {
+                for(var i=0; i<data.length; i++)
+                {
+                        product_array.push(data[i]);
+                        var new_product = '<div onclick="viewProduct('+ (product_array.length-1)  +')" class="card" id="'+ data[i].product_id  +'"><div class="card-img" style="background-image:url(\'uploads/images/'+ data[i].product_image +'\') !important;background-position:center !important;"></div><div class="card-title">' + data[i].product_name +'</div><div class="card-price">&#8377; ' + data[i].product_price +'</div><div class="product-badge"></div><div class="product-buy" onclick="addToCart('+ (product_array.length-1) +')"></div></div>';
+                       
+                        document.getElementById('products-section').innerHTML+= new_product;
+                }
+                document.getElementById('products-section').innerHTML+= '<div class="big_block" ><div class="load_more" style="background-color:grey;cursor:not-allowed" >NO MORE ITEMS TO LOAD</div></div>';
+        }
+        else
+        {
+                document.getElementById('products-section').innerHTML+= '<img width="50%" height="auto" src="uploads/images/search_banner.png"><br><p style="font-size:20px;color:gray">What about trying something else?</p><div class="big_block" ><div class="load_more" style="background-color:grey;cursor:not-allowed" >NO MATCHING RESULTS FOUND</div></div>';
+        }
+            })
+    .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('products-section').innerHTML+= '<div class="big_block" onclick="javascript: window.location.reload()" ><div class="load_more" style="background-color:pink;cursor:" >ERROR: PLEASE RELOAD PAGE</div></div>';
+        });
+    }
+
+
+        function showEdit(id){
+                
+                console.log("Show edit called: ",id);
+                document.getElementById('products-section').style.display='none';
+        document.getElementById('view-section').style.display='none';
+        document.getElementById('profile-section').style.display='none';
+        document.getElementById('cart-section').style.display='none';
+        document.getElementById('register-section').style.display='none';
+            document.getElementById('login-section').style.display='none';
+        document.getElementById('add-section').style.display='none';
+        document.getElementById('edit-section').style.display='';
+        document.getElementById('pc').setAttribute('onclick','editProduct('+userProducts[id].product_id+')')
+        document.getElementById('up2_name').value = userProducts[id].product_name.toString();
+        document.getElementById('up2_mrp').value = parseInt(userProducts[id].product_mrp);
+        document.getElementById('up2_price').value = parseInt(userProducts[id].product_price);
+        document.getElementById('up2_des').value = userProducts[id].product_description.toString();
+}
+
+        function showAdd(){
+                if(window.localStorage.getItem('token'))
+                {
+                console.log("SHOW ADD CALLED")
+                document.getElementById('products-section').style.display='none';
+        document.getElementById('view-section').style.display='none';
+        document.getElementById('profile-section').style.display='none';
+        document.getElementById('cart-section').style.display='none';
+        document.getElementById('register-section').style.display='none';
+            document.getElementById('login-section').style.display='none';
+        document.getElementById('add-section').style.display='';
+        document.getElementById('edit-section').style.display='none';
+                }
+                else 
+                {
+                        showLogin();
+                        snatchAlert("Please Login to access your seller Account on Snatch!",0);
+                }
+               
+        }
+        function showLogin(){
+                console.log("SHOW LOGIN CALLED")
+                document.getElementById('products-section').style.display='none';
+        document.getElementById('view-section').style.display='none';
+        document.getElementById('profile-section').style.display='none';
+        document.getElementById('cart-section').style.display='none';
+        document.getElementById('register-section').style.display='none';
+            document.getElementById('login-section').style.display='';
+        document.getElementById('add-section').style.display='none';
+        document.getElementById('edit-section').style.display='none';
+        }
+
+        function clickUpload(){
+                document.getElementById('iu').click();
+        }
+
+        function goBack(){
+                showProducts();
+        }
+	 function loadProducts() {
+                 getIndex();
+                 his_array.push('products');
+         console.log("Attempting to load Products");
+         document.getElementById('products-section').style.display='';
+        document.getElementById('view-section').style.display='none';
+        document.getElementById('profile-section').style.display='none';
+        document.getElementById('cart-section').style.display='none';
+        document.getElementById('register-section').style.display='none';
+            document.getElementById('login-section').style.display='none';
+        document.getElementById('add-section').style.display='none';
+        document.getElementById('edit-section').style.display='none';
+
+            fetch("http://127.0.0.1:5000/products?category="+category+'&offset='+offset+'&filter='+filter+'&low='+low+'&high='+high,  {
+        method: 'GET',
+    })
+    .then(response => response.json())
+        .then(function(data){ 
+            console.log(data);
+            if(data.length>0)
+            {
+                for(var i=0; i<data.length; i++)
+                {
+                        product_array.push(data[i]);
+                        var new_product = '<div onclick="viewProduct('+ (product_array.length-1)  +')" class="card" id="'+ data[i].product_id  +'"><div class="card-img" style="background-image:url(\'uploads/images/'+ data[i].product_image +'\') !important;background-position:center !important;"></div><div class="card-title">' + data[i].product_name +'</div><div class="card-price">&#8377; ' + data[i].product_price +'</div><div class="product-badge"></div><div class="product-buy" onclick="addToCart('+ (product_array.length-1) +')"></div></div>';
+                       
+                        document.getElementById('products-section').innerHTML+= new_product;
+                }
+                document.getElementById('products-section').innerHTML+= '<div class="big_block" id="lm_big" onclick="loadMore()"><div class="load_more">LOAD MORE</div></div>';
+        }
+        else document.getElementById('products-section').innerHTML+= '<div style="height:30vh;"></div><img width="35%" height="auto" src="uploads/images/shop_banner.png"><br><p style="font-size:20px;color:gray">Money can’t buy happiness.<br> For everything else, there is Snatch!</p><div class="big_block" ><div class="load_more" style="background-color:grey;cursor:not-allowed" >NO MORE ITEMS TO LOAD</div></div>';
+            })
+    .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('products-section').innerHTML+= '<br><br><br><br><img width="40%" height="auto" src="uploads/images/snatch_black.png"><br><BR><BR><p style="font-size:20px;color:gray">Your Demands. Our Passion!</p><br><br><div class="big_block" onclick="javascript: window.location.reload()" ><div class="load_more" style="width:50%;cursor:pointer" >UNDER MAINTENANCE | RETRY CONNECTION</div></div>';
+        });
+    }
+
+    function showProducts()
+    {
+        document.getElementById('products-section').style.display='';
+        document.getElementById('view-section').style.display='none';
+        document.getElementById('profile-section').style.display='none';
+        document.getElementById('cart-section').style.display='none';
+        document.getElementById('register-section').style.display='none';
+            document.getElementById('login-section').style.display='none';
+        document.getElementById('add-section').style.display='none';
+        document.getElementById('edit-section').style.display='none';
+    }
+
+    function showRegister()
+    {
+            if(window.localStorage.getItem('email'))
+            {
+                document.getElementById('products-section').style.display='none';
+        document.getElementById('view-section').style.display='none';
+        document.getElementById('profile-section').style.display='';
+        document.getElementById('cart-section').style.display='none';
+        document.getElementById('register-section').style.display='none';
+            document.getElementById('login-section').style.display='none';
+        document.getElementById('add-section').style.display='none';
+        document.getElementById('edit-section').style.display='none';
+            }
+            else{
+                document.getElementById('products-section').style.display='none';
+        document.getElementById('view-section').style.display='none';
+        document.getElementById('profile-section').style.display='none';
+        document.getElementById('cart-section').style.display='none';
+        document.getElementById('register-section').style.display='';
+            document.getElementById('login-section').style.display='none';
+        document.getElementById('add-section').style.display='none';
+        document.getElementById('edit-section').style.display='none';
+            }
+    }
+
+    function switchCategory(cat){
+                offset=0;
+                category = cat;
+                product_array=[];
+                document.getElementById('products-section').innerHTML='';
+                loadProducts();
+        }
+        var si=-1;
+        function switchSort()
+        {
+                si++;
+                si%=5;
+                var sortOrders = ['Most Relevant First', 'Lowest Price First', 'Highest Price First', 'Latest Trends First', 'Oldest Trends First'];
+                filter=si;
+                document.getElementById('ss').innerHTML = sortOrders[si];
+
+        }
+        var toggleFilters = false;
+        function resetSort()
+        {
+                console.log("RESET CALLED");
+                document.getElementById('af').innerHTML="APPLY";
+                        document.getElementById('af').setAttribute('onclick','applyFilters()');
+                filter=0;
+                si=-1;
+                high = 999999999;
+                low = 0;
+                document.getElementById('ss').innerHTML = "Sorting Scheme";
+                document.getElementById('lp').value = '';
+                document.getElementById('hp').value = '';
+
+                product_array = [];
+                        document.getElementById('products-section').innerHTML = '';
+                        offset=0;
+                        loadProducts();
+        }
+
+function viewProduct(id){
+        his_array.push(id);
+        console.log()
+        document.getElementById('products-section').style.display='none';
+        document.getElementById('view-section').style.display='';
+        document.getElementById('profile-section').style.display='none';
+        document.getElementById('cart-section').style.display='none';
+        document.getElementById('register-section').style.display='none';
+            document.getElementById('login-section').style.display='none';
+        document.getElementById('add-section').style.display='none';
+        document.getElementById('edit-section').style.display='none';
+        cart_array = JSON.parse(window.localStorage.getItem('cart'));
+        var flag=0;
+        if(window.localStorage.getItem('cart')!==null)
+        {
+        cart_array = JSON.parse(window.localStorage.getItem('cart'));
+                
+                for(var i=0; i<cart_array.length;i++)
+                {
+                        if(cart_array[i].product_id.toString()===product_array[id].product_id.toString()) flag=1;
+                }
+        }
+
+
+        document.getElementById('view-section').innerHTML= '<i class="fas fa-arrow-left back" style="cursor:pointer;color: black;z-index: 100;position: fixed;top:50px;left:30px;font-size:24px;" onclick="goBack()" ></i>';
+        
+        var data = product_array[id];
+                        var new_product;
+                        if(flag===0) new_product='<div class="left-view"><div class="product-image-view" style="background-image:url(\'uploads/images/'+ data.product_image +'\');background-position:center;"></div><div class="addtocart button" id="gtc" onclick="addToCart(' + id +')">ADD TO CART</div><div class="checkoutnow button" onclick="checkout('+ id +')" id="btc">BUY THIS NOW</div></div><div class="right-view"><div class="product-title-view">'+data.product_name+' | &#8377;'+ data.product_price + '</div><div class="product-discount-view">MRP: &#8377;' + data.product_mrp + ' | Discount: &#8377;'+ (data.product_mrp-data.product_price) + ' ('+ parseInt(((data.product_mrp-data.product_price)/data.product_mrp)*100) + '%)</div><div class="product-description-view" style="margin-bottom:50px;">' + data.product_description + '</div></div>';
+                       else new_product='<div class="left-view"><div class="product-image-view"style="background-image:url(\'uploads/images/'+ data.product_image +'\'); background-position:center;"></div><div class="addtocart button" id="gtc" onclick="showCart()">GO TO CART</div><div class="checkoutnow button" onclick="checkout('+ id +')" id="btc">CHECKOUT NOW</div></div><div class="right-view"><div class="product-title-view">'+data.product_name+' | &#8377;'+ data.product_price + '</div><div class="product-discount-view">MRP: &#8377;' + data.product_mrp + ' | Discount: &#8377;'+ (data.product_mrp-data.product_price) + ' ('+ parseInt(((data.product_mrp-data.product_price)/data.product_mrp)*100) + '%)</div><div class="product-description-view" style="margin-bottom:50px;">' + data.product_description + '</div></div>';
+                        document.getElementById('view-section').innerHTML+= new_product;
+                        
+                }
+
+
+                function applyFilters(){
+                        console.log("APPLY CALLED")
+                        var setLow;
+                        if(document.getElementById('lp').value.length==0 || document.getElementById('hp').value.length==0) snatchAlert("Please provide a Valid Value",0);
+                        else 
+                        {
+                        var tl = 0; 
+                        var th = 0;
+                       
+                        setLow = parseInt(document.getElementById('lp').value);
+                        if(setLow<0 || typeof(setLow)==NaN || setLow===undefined || setLow=='') snatchAlert("Please Enter a Valid Value",0);
+                        else tl = setLow;
+                       
+                        setHi = parseInt(document.getElementById('hp').value);
+                        if(setHi<0 || typeof(setHi)==NaN || setHi===undefined || setHi=='') snatchAlert("Please Enter a Valid Value",0);
+                        else th = setHi;
+                       
+                        if(tl>th) snatchAlert("Price Upper Bound must be higher than Price Lower Bound",-1);
+                        else 
+                        {
+                                high = th;
+                                low = tl;
+                        product_array = [];
+                        document.getElementById('products-section').innerHTML = '<i class="fas fa-arrow-left back" style="cursor:pointer;color: black;z-index: 100;position: fixed;top:50px;left:30px;font-size:24px;" onclick="goBack()" ></i>';
+                        offset=0;
+                        loadProducts();
+
+                        document.getElementById('af').innerHTML="RESET";
+                        document.getElementById('af').setAttribute('onclick','resetSort()');
+                        }
+                }
+        }
+
+        function logout(id){
+                var cart = JSON.parse(localStorage.getItem('cart'));
+                var email = localStorage.getItem('email').toString();
+                
+                var myHeaders = new Headers();
+                        myHeaders.append('Content-Type', 'application/json');
+                fetch('http://127.0.0.1:5000/logout',  {
+        method: 'POST',
+        body: JSON.stringify({"cart": cart , "email": email }),
+        headers: myHeaders,
+                        })
+    .then(response => response.json())
+    .then(function(data){
+            console.log(data.code);
+
+            if(data.code===200)
+            {
+                window.localStorage.removeItem('token');
+                window.localStorage.removeItem('email');
+                window.localStorage.removeItem('cart');
+                window.localStorage.removeItem('collectedIndex');
+                window.localStorage.removeItem('minIndex');
+                getIndex();
+                if(id==1) snatchAlert("You have Logged Out successfully! Your Cart data has been saved to Snatch Servers.",1);
+                if(id==2) snatchAlert("You were Logged out automatically to keep your data Safe! Please Login to continue.",0);
+            }
+            else if(data.code===-4)
+        {
+                snatchAlert("Snatch Servers currently unreachable! Your cart has not been saved.",0)
+        }
+        else{
+                snatchAlert("You have Logged Out successfully! Your Cart data has been saved to Snatch Servers.",-1);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('products-section').innerHTML+= '<div class="big_block" onclick="javascript: window.location.reload()" ><div class="load_more" style="background-color:pink;cursor:" >ERROR: PLEASE RELOAD PAGE</div></div>';
+        });
+
+              
+        }
+
+        function deleteProduct(id){
+                var auth = window.localStorage.getItem('token').toString();
+                var db_id = id;
+                var ui_id = -1;
+                for(var i=0; i<userProducts.length; i++)
+                {
+                        if(userProducts[i].product_id==db_id) ui_id=i;
+                }
+                console.log("ui_id",ui_id);
+                userProducts.splice(ui_id,1);
+                var myHeaders = new Headers();
+                        myHeaders.append('Authorization', auth);
+                        myHeaders.append('Content-Type', 'application/json');
+                        fetch('http://127.0.0.1:5000/delete',  {
+        method: 'POST',
+        body: JSON.stringify({"id": db_id }),
+        headers: myHeaders,
+                        })
+    .then(response => response.json())
+    .then(function(data){
+            if(data.code==200)
+            {
+                document.getElementById(id).remove();
+                snatchAlert("Item has been Deleted!",-1);
+            }
+            else{
+                    snatchAlert('Snatch Servers Busy!',0)
+            }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('products-section').innerHTML+= '<div class="big_block" onclick="javascript: window.location.reload()" ><div class="load_more" style="background-color:pink;cursor:" >ERROR: PLEASE RELOAD PAGE</div></div>';
+        });
+
+
+
+        }
+
+    function loadMore()
+        {
+                document.getElementById('lm_big').remove();
+                offset+=12;
+                loadProducts();
+        }
+        switchCategory('all');
+
+        function toggleFilter()
+        {
+                if(!toggleFilters) showFilters();
+                else hideFilters();
+        }
+
+        function showFilters()
+        {
+                toggleFilters = true;
+                document.getElementById('fb').style.display="";
+        }
+        function hideFilters()
+        {
+                toggleFilters = false;
+                document.getElementById('fb').style.display="none";
+        }
+        var cart_array = [];
+        function addToCart(id){
+        if(window.localStorage.getItem('cart')!==null)
+        {
+        cart_array = JSON.parse(window.localStorage.getItem('cart'));
+        }
+        else cart_array = [];
+                var flag=1;
+                console.log("Adding to cart: ",product_array[id].product_id);
+                for(var i=0; i<cart_array.length;i++)
+                {
+                        if(cart_array[i].product_id.toString()===product_array[id].product_id.toString()) flag=0;
+                }
+                if(flag) cart_array.push(product_array[id]);
+                else console.log("Item already added!");
+                window.localStorage.setItem("cart",JSON.stringify(cart_array));
+                console.log(JSON.parse(window.localStorage.getItem('cart')));
+                document.getElementById('btc').innerHTML = "CHECK OUT NOW";
+                document.getElementById('gtc').innerHTML = "GO TO CART";
+                document.getElementById('gtc').setAttribute('onclick','showCart()');
+        }
+        var cart_items = [];
+        function showCart(){
+                his_array.push('cart');
+                document.getElementById('products-section').style.display='none';
+        document.getElementById('view-section').style.display='none';
+        document.getElementById('profile-section').style.display='none';
+        document.getElementById('cart-section').style.display='';
+        document.getElementById('register-section').style.display='none';
+            document.getElementById('login-section').style.display='none';
+        document.getElementById('add-section').style.display='none';
+        document.getElementById('edit-section').style.display='none';
+        
+        cart_items = [];
+        if(window.localStorage.getItem('cart'))
+        {
+        cart_items = JSON.parse(window.localStorage.getItem('cart'));
+        console.log(cart_items);
+        }
+        var cart_divs = '<h1 style="margin:30px;">Cart | ' + cart_items.length + ' Items </h1><i class="fas fa-arrow-left back" style="cursor:pointer;color: black;z-index: 100;position: fixed;top:50px;left:30px;font-size:24px;" onclick="goBack()" ></i>';
+                if(!window.localStorage.getItem('email')){
+                        cart_divs +='<div class="cart_card" style="box-shadow:0px 0px 0px white;padding:15px; height:auto;width:70%;background-color:orange;font-size:16px; color:white;"><i class="fas fa-bell"></i>&emsp;Your Cart Selections are Temporary and might get lost!</div>'
+                }
+                else{
+                        cart_divs +='<div class="cart_card" style="box-shadow:0px 0px 0px white;padding:15px; height:auto;width:70%;background-color:green;font-size:16px; color:white;"><i class="fas fa-bell"></i>&emsp;Your Cart Selections are synced to our servers everytime you Logout.</div>'
+                }
+        if(cart_items.length==0)
+        {
+                cart_divs+='<img width="30%" height="auto" src="uploads/images/cart_banner.png"><br><Br><p style="font-size:20px;color:gray">Its feels lonely in here!</p><br><br><div class="button" style="width:50%" onclick="showProducts()">START SHOPPING</div>';
+        }
+        else
+        {
+                var totalCost = 0;
+                var totalMRP = 0;
+        for(var i=0; i<cart_items.length;i++)
+        {
+                totalCost += parseInt(cart_items[i].product_price);
+                totalMRP += parseInt(cart_items[i].product_mrp);
+                var cart_product = '<div class="cart_card"><div class="cart_img"></div><div style="cursor:pointer" onclick="deleteCart('+ i +')" class="trash_icon"><i class="fas fa-trash"></i></div><div class="cart_details"><div class="cart_name">'+ cart_items[i].product_name+'</div><div class="cart_price">&#8377;'+ cart_items[i].product_price+'</div></div></div>';
+                cart_divs+=cart_product;
+        }
+        cart_divs+="<div style='font-size:20px'>Total MRP: &#8377;"+ totalMRP + "&emsp;|&emsp;Snatch Price: &#8377;"+ totalCost +"</div>";
+        cart_divs+='<div class="button" style="width:60% !important;">Total Savings: &#8377;'+ (totalMRP-totalCost) + ' (' + parseInt(((totalMRP-totalCost)/totalMRP)*100) +'%)&emsp;|&emsp;PROCEED TO CHECKOUT</div><div style="height:15vh;width:40vw;"></div>';
+}
+        document.getElementById('cart-section').innerHTML=cart_divs;
+        }
+
+
+        
+    function deleteCart(id)
+    {
+        cart_items.splice(id,1);
+        console.log(cart_items);
+        window.localStorage.setItem('cart',JSON.stringify(cart_items));
+        console.log(window.localStorage);
+        snatchAlert("Item has been Deleted from Cart",-1);
+        showCart();
+    }
+
+    function snatchAlert(message, code)
+    {
+            if(code==1) document.getElementById('prompt').style.backgroundColor="green";
+            if(code==-1) document.getElementById('prompt').style.backgroundColor="red";
+            if(code==0) document.getElementById('prompt').style.backgroundColor="orange";
+            document.getElementById('prompt').style.opacity=1;
+            document.getElementById('prompt').innerHTML=message;
+            setTimeout(function(){ document.getElementById('prompt').style.opacity=0; document.getElementById('prompt').style.backgroundColor="transparent";}, 3000);
+    }
+
+    function verifyToken()
+    {
+        console.log("Verify called");
+            if(window.localStorage.getItem('token'))
+            {
+                var auth = window.localStorage.getItem('token').toString();
+
+                        var myHeaders = new Headers();
+                        myHeaders.append('Authorization', auth);
+                        myHeaders.append('Content-Type', 'application/json');
+
+                fetch('http://127.0.0.1:5000/verify',  {
+        method: 'GET',
+        headers: myHeaders,
+    })
+    .then(response => response.json())
+    .then(function(data) {
+            console.log(data);
+        if(data.code===200) 
+        {
+                document.getElementById('sell').style.display="";
+                document.getElementById('power').style.display="";
+        }
+        if(data.code===-4)
+        {
+                   document.getElementById('sell').style.display="none";
+                document.getElementById('power').style.display="none";
+                logout(2);
+        }
+        if(data.code===55)
+        {
+                   document.getElementById('sell').style.display="none";
+                document.getElementById('power').style.display="none";
+                logout(2);
+        }
+    });
+}
+            else {
+                   document.getElementById('sell').style.display="none";
+                document.getElementById('power').style.display="none";
+            }
+    }
+
+
+
+
+</script>
+</html>
