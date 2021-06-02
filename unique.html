@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display the first character of the string "HELLO WORLD".</p>
+<input type="text" id="si">
+<button onclick="search()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function onlyUnique(value, index, self) {
+  return self.indexOf(value) === index;
+}
+
+var search_item;
+//console.log(longest_common_starting_substring(['go', 'google'])); 
+search_power = [];
+suitable_searches = [];
+
+function longest_common_starting_substring(arr1){
+  const arr= arr1.concat().sort();
+  const a1= arr[0];
+  const a2= arr[arr.length-1];
+  const L= a1.length;
+  let i= 0;
+  while(i< L && a1.charAt(i)=== a2.charAt(i)) i++;
+  return a1.substring(0, i).length;
+}
+
+function sortSearch()
+{
+        search_power = [];
+        for(var i=0; i<index.length;i++)
+        {
+                var w_match = 0, c_match = 0;
+                if(search_item.toLowerCase()===index[i].toLowerCase()) 
+                {
+                        w_match++;
+                        c_match+=(search_item.length);
+                }
+                else c_match+= longest_common_starting_substring([search_item.toLowerCase(), index[i].toLowerCase()]);
+                search_power.push(Math.pow(c_match,w_match));
+        }
+        console.log(search_power);
+
+        for(var i=0; i<search_power.length;i++)
+        {
+                max_index = 0; max = -1;
+                for(var j=0; j<search_power.length;j++)
+                {
+                        if(search_power[j]>max) 
+                        {
+                                max=search_power;
+                                max_index=j;
+                        }
+                }
+                console.log("\nThis is Result Rank #"+(i+1)+": "+index[max_index]+" at Similarity Power = "+max);
+                suitable_searches.push(index[max_index]);
+                search_power[max_index]=-2;
+        }
+        console.log(suitable_searches);
+        console.log("Search Concluded!");
+}
+
+
+
+
+
+var index = [];
+function indexTerms() {
+  var str = "This is the Latest iPhone-X (64 GB),powered by the powerful A-13 BIONIC! Apple: is Apple";
+  str = str.replace("!"," ");
+  str = str.replace("?", " ");
+  str = str.replace(".", " ");
+  str = str.replace("'", " ");
+  str = str.replace("[", " ");
+  str = str.replace("]", " ");
+  str = str.replace("(", " ");
+  str = str.replace(")", " ");
+  str = str.replace("/", " ");
+  str = str.replace(",", " ");
+  str = str.replace(":", " ");
+  str = str.replace(";", " ");
+  var res = str.split(" ");
+  var split=[];
+  for(var i=0; i<res.length;i++)
+  if(res[i].length>=3 && (res[i].toLowerCase()!=="the" || res[i].toLowerCase()!=="this")) 
+  {
+  split.push(res[i].toLowerCase());
+  split.push(res[i].toLowerCase().replace('-',' '));
+  }
+  index = split.filter(onlyUnique);
+  document.getElementById("demo").innerHTML =index;
+}
+
+function search(){
+        search_item = document.getElementById('si').value.toLowerCase();
+        indexTerms();
+        sortSearch();
+}
+</script>
+
+</body>
+</html>
