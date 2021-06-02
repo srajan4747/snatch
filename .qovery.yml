@@ -1,0 +1,15 @@
+---
+application:
+  name: "snatch"
+  project: "snatch-store"
+  organization: "QoveryCommunity"
+databases:
+- type: "MYSQL"
+  name: "snatch"
+  version: "8.0"
+routers:
+- name: "main-snatch"
+  routes:
+  - application_name: "snatch"
+    paths:
+    - "/*"
